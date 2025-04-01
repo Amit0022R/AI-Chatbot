@@ -21,6 +21,7 @@ body {
 
 
 .chatbot-popup {
+    position: relative;
     overflow: hidden;
     width: 420px;
     background: #fff;
@@ -83,6 +84,9 @@ body {
     gap: 20px;
     height: 460px;
     overflow-y: auto;
+    margin-bottom: 84px;
+    scrollbar-width: thin;
+    scrollbar-color: #ccc transparent;
     padding: 26px 23px;
 }
 
@@ -126,11 +130,65 @@ body {
 }
 
 .chat-footer {
-    
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: #fff;
+    padding: 15px 22px 20px;
 }
 
+.chat-footer .input-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
 
+.chat-footer .chat-form {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    outline: 2px solid #CCCCE5;
+    border-radius: 32px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
 
+.chat-footer .chat-form:focus-within {
+    outline: 2px solid #2f80ed;
+}
 
+.chat-form .message-input {
+    border: none;
+    outline: none;
+    background: none;
+    height: 50px;
+    width: 100%;
+    padding: 0 17px;
+    font-size: 1rem;
+}
+
+.chat-form button {
+    height: 35px;
+    width: 34px;
+    display: none;
+    color: #fff;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: #2f80ed;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-right: 6px;
+    font-size: 1.24rem;
+    transform: 0.2s ease;
+}
+
+.chat-form button:hover {
+    background: #56ccf2;
+}
+
+.chat-form .message-input:valid~button {
+    display: block;
+} 
 
 
